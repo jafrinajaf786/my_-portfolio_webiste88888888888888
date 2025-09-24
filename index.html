@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI & Data Science Portfolio</title>
+    <link rel="stylesheet" href="C:\Users\pc\Downloads\najaf portfolio\main.css">
+    <link rel="stylesheet" href="animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text"> MY Portfolio</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+                <a href="#certifications" class="nav-link">Certifications</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <button class="theme-toggle" id="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+            <div class="particles">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+        </div>
+        
+        <div class="hero-content">
+    <div class="profile-image-hero">
+        <img src="main profile.jpg" alt="Profile" class="profile-img">
+    </div>
+    <h1 class="hero-title fade-in">Najaf Asghar Jafri</h1>
+<p id="animated-subtitle" 
+   style="font-size:1.2rem;color:#ffffff;text-align:center;margin-top:15px;
+          font-family:'Roboto',sans-serif;white-space:pre-wrap;overflow:hidden;
+          display:inline-block;position:relative;">
+  AI & Data Science Enthusiast | Machine Learning Explorer | Developer
+</p>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const subtitle = document.getElementById("animated-subtitle");
+  const text = subtitle.textContent;
+  subtitle.textContent = "";
+
+  // Add blinking cursor using JS instead of CSS
+  const cursor = document.createElement("span");
+  cursor.textContent = "|";
+  cursor.style.color = "#00c6ff";
+  cursor.style.fontWeight = "bold";
+  cursor.style.marginLeft = "2px";
+  subtitle.appendChild(cursor);
+
+  let index = 0;
+  function typeEffect() {
+    if (index < text.length) {
+      cursor.insertAdjacentText("beforebegin", text.charAt(index));
+      index++;
+      setTimeout(typeEffect, 80); // typing speed
+    }
+  }
+
+  // Cursor blink animation
+  setInterval(() => {
+    cursor.style.visibility = cursor.style.visibility === "hidden" ? "visible" : "hidden";
+  }, 500);
+
+  typeEffect();
+});
+</script>
+
+    <!-- Buttons -->
+    <div class="hero-buttons fade-in">
+    <button class="cta-button" id="explore-btn">
+        <span>Explore My Work</span>
+        <i class="fas fa-arrow-right"></i>
+    </button>
+
+    <a href="new resume313.pdf" download class="cta-button resume-btn">
+        <span>Download Resume</span>
+        <i class="fas fa-download"></i>
+    </a>
+</div>
+
+</div>
+
+  
+      
+    </section>
+
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="profile.jpg" alt="Profile" class="profile-img-about">
+                </div>
+                <div class="about-text">
+                    <p class="about-description">
+Hi! I’m Najaf Asghar Jafri, a passionate and curious BCA graduate from ERA University with a strong focus on Artificial Intelligence, Machine Learning, and Data Science. I love building intelligent systems, developing innovative projects, and solving real-world problems using technology.                    </p>
+                    <p class="about-description">
+                        My journey in technology spans across various domains including deep learning, natural language processing, computer vision, and web development. I'm constantly learning and experimenting with cutting-edge technologies to stay at the forefront of innovation.
+                    </p>
+                    <div class="interests">
+                        <h3>Interests</h3>
+                        <div class="interest-tags">
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">Deep Learning</span>
+                            <span class="tag">Computer Vision</span>
+                            <span class="tag">NLP</span>
+                            <span class="tag">Data Science</span>
+                            <span class="tag">Data Analytics</span>
+                            <span class="tag">Python Programming</span>
+                            <span class="tag">Exploring New Technologies</span> 
+                            <span class="tag">Web Development</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+<section id="projects" class="section projects-section">
+    <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        
+        <div class="project-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="ai">AI</button>
+            <button class="filter-btn" data-filter="ml">ML</button>
+            <button class="filter-btn" data-filter="web">Web</button>
+            <button class="filter-btn" data-filter="cv">Computer Vision</button>
+        </div>
+
+        <div class="projects-grid">
+            <div class="project-card" data-category="ai ml cv">
+                <div class="project-image">
+                    <img src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Biometric Attendance System">
+                </div>
+                <div class="project-content">
+                    <h3>Biometric Attendance System</h3>
+                    <p>Real-time face recognition system to track check-in/out, calculate salaries, and store data in MySQL using OpenCV and Streamlit.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">OpenCV</span>
+                        <span class="tech-tag">Streamlit</span>
+                        <span class="tech-tag">MySQL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/jafrinajaf786/Ai-Powered-faced-based-Attendance-System-Major-" class="project-link"><i class="fab fa-github"></i></a>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="ai ml">
+                <div class="project-image">
+                    <img src="https://images.pexels.com/photos/8386434/pexels-photo-8386434.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="DiaGnoFy AI">
+                </div>
+                <div class="project-content">
+                    <h3>DiaGnoFy AI</h3>
+                    <p>Disease prediction assistant providing health suggestions, diet plans, precautions, workouts, and downloadable reports.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">TensorFlow</span>
+                        <span class="tech-tag">Streamlit</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/jafrinajaf786/DiagnoFy-Ai" class="project-link"><i class="fab fa-github"></i></a>
+                       
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="ai cv">
+                <div class="project-image">
+                    <img src="https://images.pexels.com/photos/590020/pexels-photo-590020.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="AI Virtual Eye Mouse">
+                </div>
+                <div class="project-content">
+                    <h3>AI Virtual Eye Mouse</h3>
+                    <p>Hands-free cursor control system using MediaPipe, OpenCV, and PyAutoGUI for real-time eye tracking.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">OpenCV</span>
+                        <span class="tech-tag">MediaPipe</span>
+                        <span class="tech-tag">PyAutoGUI</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/jafrinajaf786/Ai-virtual-Eye-Mouse" class="project-link"><i class="fab fa-github"></i></a>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="ml">
+                <div class="project-image">
+                    <img src="https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="ML Ready AI">
+                </div>
+                <div class="project-content">
+                    <h3>ML Ready AI</h3>
+                    <p>Upload raw datasets and download cleaned, ML-ready data with automated EDA and AI-driven insights.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Pandas</span>
+                        <span class="tech-tag">Scikit-learn</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/jafrinajaf786/ML-Ready-Ai/tree/main" class="project-link"><i class="fab fa-github"></i></a>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="web ai">
+                <div class="project-image">
+                    <img src="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Website Chatbot">
+                </div>
+                <div class="project-content">
+                    <h3>Website Chatbot</h3>
+                    <p>LLM-powered chatbot built using LangChain and integrated into the Devmitra Solutions website using Flask.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">LangChain</span>
+                        <span class="tech-tag">Flask</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://devmitra.com/" class="project-link"><i class="fab fa-github"></i></a>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="ai web">
+                <div class="project-image">
+                    <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="YouTube Video Summarizer">
+                </div>
+                <div class="project-content">
+                    <h3>YouTube Video Summarizer</h3>
+                    <p>Extracts and summarizes YouTube transcripts with multilingual translation using Google Translate API.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Google Translate API</span>
+                        <span class="tech-tag">NLP</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/jafrinajaf786/You-tube-video-summarizer" class="project-link"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div style="text-align:center; margin-top:40px;">
+  <a href="https://github.com/jafrinajaf786" target="_blank" 
+     style="display:inline-block; padding:12px 24px; background:#24292e; color:#fff; 
+            font-size:18px; border-radius:8px; text-decoration:none; font-weight:bold; 
+            transition:0.3s ease;">
+    🚀 Explore More Projects on GitHub
+  </a>
+</div>
+
+</section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills-section">
+        <div class="container">
+            <h2 class="section-title">Skills & Technologies</h2>
+            <div class="skills-grid">
+                <div class="skill-item" data-skill="python">
+                    <div class="skill-icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <span class="skill-name">Python</span>
+                </div>
+                <div class="skill-item" data-skill="tensorflow">
+                    <div class="skill-icon">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow">
+                    </div>
+                    <span class="skill-name">TensorFlow</span>
+                </div>
+                <div class="skill-item" data-skill="nlp">
+                <div class="skill-icon animated-icon">
+                    <img src="nlp.jpg" alt="NLP">
+                </div>
+                <span class="skill-name">NLP</span>
+            </div>
+                <div class="skill-item" data-skill="sql">
+                    <div class="skill-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <span class="skill-name">SQL</span>
+                </div>
+                 <div class="skill-item" data-skill="flask">
+                <div class="skill-icon animated-icon">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask">
+                </div>
+                <span class="skill-name">Flask</span>
+            </div>
+            <div class="skill-item" data-skill="ai-ml">
+                <div class="skill-icon">
+                    <img src="aiml.jpg" alt="AI/ML" style="width:40px;height:40px;">
+                </div>
+                <span class="skill-name">AI / ML</span>
+            </div>
+                <div class="skill-item" data-skill="streamlit">
+                <div class="skill-icon animated-icon">
+                    <img src="https://streamlit.io/images/brand/streamlit-mark-color.svg" alt="Streamlit">
+                </div>
+                <span class="skill-name">Streamlit</span>
+            </div>
+        
+                <div class="skill-item" data-skill="langchain">
+                <div class="skill-icon animated-icon">
+                    <img src="https://avatars.githubusercontent.com/u/74159710?s=200&v=4" alt="LangChain">
+                </div>
+                <span class="skill-name">LangChain</span>
+            </div>
+            </div>
+        </div>
+    </section>
+<!-- Certifications Section -->
+<section id="certifications" class="section certifications-section">
+    <div class="container">
+        <h2 class="section-title">Certifications & Awards</h2>
+        <div class="certifications-grid">
+            <!-- OneRoadmap AI and Data Scientist -->
+            <div class="cert-card">
+                <div class="cert-icon">
+                    <img src="aiml.jpg" alt="OneRoadmap Logo" style="width:60px; height:60px; border-radius:8px;">
+                </div>
+                <div class="cert-content">
+                    <h3>AI and Data Scientist</h3>
+                    <p>OneRoadmap</p>
+                    <span class="cert-date">Issued Aug 2025</span>
+                  
+                </div>
+            </div>
+
+
+            <!-- IBM Build Your Own Chatbot -->
+            <div class="cert-card">
+                <div class="cert-icon">
+                    <img src="ibm.png" alt="IBM Logo" style="width:60px; height:60px; border-radius:8px;">
+                </div>
+                <div class="cert-content">
+                    <h3>Build Your Own Chatbot</h3>
+                    <p>IBM</p>
+                    <span class="cert-date">Issued Jun 2025</span>
+                    
+                </div>
+            </div>
+
+
+            <!-- Accenture Data Analytics and Visualization -->
+            <div class="cert-card">
+                <div class="cert-icon">
+                    <img src="Accenture.png" alt="Accenture Logo" style="width:60px; height:60px; border-radius:8px;">
+                </div>
+                <div class="cert-content">
+                    <h3>Data Analytics and Visualization</h3>
+                    <p>Accenture</p>
+                    <span class="cert-date">Issued Jan 2025</span>
+                </div>
+            </div>
+
+            <!-- Infosys Artificial Intelligence using Python -->
+            <div class="cert-card">
+                <div class="cert-icon">
+                    <img src="infosys.jpg" alt="Infosys Logo" style="width:60px; height:60px; border-radius:8px;">
+                </div>
+                <div class="cert-content">
+                    <h3>Artificial Intelligence using Python</h3>
+                    <p>Infosys Springboard</p>
+                    <span class="cert-date">Issued Jan 2025</span>
+                </div>
+            </div>
+
+            <!-- HP Data Science and Data Analysis -->
+            <div class="cert-card">
+                <div class="cert-icon">
+                    <img src="fp .png" alt="HP Logo" style="width:60px; height:60px; border-radius:8px;">
+                </div>
+                <div class="cert-content">
+                    <h3>Data Science and Data Analysis</h3>
+                    <p>HP</p>
+                    <span class="cert-date">Issued Jan 2025</span>
+                </div>
+            </div>
+
+            <!-- IBM Data Analysis with Python -->
+            <div class="cert-card">
+                <div class="cert-icon">
+                    <img src="ibm.png" alt="IBM Logo" style="width:60px; height:60px; border-radius:8px;">
+                </div>
+                <div class="cert-content">
+                    <h3>Data Analysis with Python</h3>
+                    <p>IBM</p>
+                    <span class="cert-date">Issued Dec 2024</span>
+                   
+                </div>
+            </div>
+
+            <!-- IBM Data Science 101 -->
+            <div class="cert-card">
+                <div class="cert-icon">
+                    <img src="ibm.png" alt="IBM Logo" style="width:60px; height:60px; border-radius:8px;">
+                </div>
+                <div class="cert-content">
+                    <h3>Data Science 101</h3>
+                    <p>IBM</p>
+                    <span class="cert-date">Issued Dec 2024</span>
+                    
+                </div>
+            </div>
+
+            <!-- IBM Python for Data Science -->
+            <div class="cert-card">
+                <div class="cert-icon">
+                    <img src="ibm.png" alt="IBM Logo" style="width:60px; height:60px; border-radius:8px;">
+                </div>
+                <div class="cert-content">
+                    <h3>Python for Data Science</h3>
+                    <p>IBM</p>
+                    <span class="cert-date">Issued Dec 2024</span>
+                </div>
+            </div>
+
+            <!-- IBM SQL and Relational Databases -->
+            <div class="cert-card">
+                <div class="cert-icon">
+                    <img src="ibm.png" alt="IBM Logo" style="width:60px; height:60px; border-radius:8px;">
+                </div>
+                <div class="cert-content">
+                    <h3>SQL and Relational Databases</h3>
+                    <p>IBM</p>
+                    <span class="cert-date">Issued Dec 2024</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="text-align:center; margin-top:30px;">
+  <a href="https://www.linkedin.com/in/najaf-asghar-jafri-257bb130a/details/certifications/" target="_blank"
+     style="display:inline-block; padding:12px 24px; background:#0A66C2; color:#fff;
+            font-size:18px; border-radius:8px; text-decoration:none; font-weight:bold;
+            transition:0.3s ease;">
+    🎓 View More Certificates on LinkedIn
+  </a>
+</div>
+
+</section>
+<!-- Experience Section -->
+<section id="experience" class="section experience-section">
+    <canvas id="particles-bg"></canvas>
+    <div class="container">
+        <h2 class="section-title">Work Experience</h2>
+        <div class="timeline">
+
+            <!-- Devmitra Solutions -->
+            <div class="timeline-item">
+                <div class="timeline-content tech-card">
+                    <h3>AI/ML Trainee</h3>
+                    <p class="company">Devmitra Solutions · Internship</p>
+                    <span class="date">May 2025 – Jul 2025</span>
+                    <p>Built AI chatbots, NER tools, video summarizer, and resume generator. 
+                    </p>
+                    <p>
+                        <strong>Skills:</strong> Python · LangChain · LLM · Flask · FastAPI · Streamlit
+
+                    </p>
+                </div>
+            </div>
+
+            <!-- Slash Mark IT Solutions -->
+            <div class="timeline-item">
+                <div class="timeline-content tech-card">
+                    <h3>Data Science Intern</h3>
+                    <p class="company">Slash Mark IT Solutions · Internship</p>
+                    <span class="date">Apr 2025 – May 2025</span>
+                    <p>Created ML models for personality test & car price prediction.</p> 
+                    <p><strong>Skills:</strong> Python · Pandas · Scikit-learn · ML Deployment</p>
+                    
+                </div>
+            </div>
+
+            <!-- AI Intern SlashMark -->
+            <div class="timeline-item">
+                <div class="timeline-content tech-card">
+                    <h3>Artificial Intelligence Intern</h3>
+                    <p class="company">Slash Mark IT Solutions · Internship</p>
+                    <span class="date">Jan 2025 – Apr 2025</span>
+                    <p>Developed CV & NLP projects: URL/Spam Predictor, Face Detection, Sentiment Analysis. 
+                   </p>
+                   <p><strong>Skills:</strong> Python · LangChain · LLM · Flask · FastAPI · Streamlit</p>
+                </div>
+            </div>
+
+            <!-- Criterion Tech -->
+            <div class="timeline-item">
+                <div class="timeline-content tech-card">
+                    <h3>Internship Trainee</h3>
+                    <p class="company">Criterion Tech · Trainee</p>
+                    <span class="date">Feb 2025 – Mar 2025</span>
+                    <p>Built ML models for Heart Disease & Gold Price prediction. 
+                    </p>
+                    <p>
+                        <strong>Skills:</strong> Python · Pandas · NumPy · Scikit-learn · ML Deployment
+                    </p>
+                </div>
+            </div>
+
+            <!-- InternPe -->
+            <div class="timeline-item">
+                <div class="timeline-content tech-card">
+                    <h3>Python Developer Intern</h3>
+                    <p class="company">InternPe · Internship</p>
+                    <span class="date">Oct 2024 – Apr 2025</span>
+                    <p>Developed beginner Python projects with GUI and
+                     MySQL integration. 
+                    </p>
+                    <p>
+                        <strong>Skills:</strong> Python · Tkinter · MySQL · GUI Programming
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div style="text-align:center; margin-top:30px;">
+  <a href="https://www.linkedin.com/in/najaf-asghar-jafri-257bb130a/details/experience/" target="_blank"
+     style="display:inline-block; padding:12px 24px; background:#0A66C2; color:#ffffff;
+            font-size:18px; border-radius:8px; text-decoration:none; font-weight:bold;
+            transition: all 0.3s ease;">
+    💼 Explore More Experiences on LinkedIn
+  </a>
+</div>
+
+</section>
+
+<!-- CSS -->
+<style>
+/* Body & background */
+body {
+    background-color: #0a0a0a;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Canvas for particles */
+#particles-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Container */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Section Title */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #00c6ff;
+}
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #0072ff;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: #0072ff;
+    transform: translateX(-50%);
+}
+
+/* Timeline Item */
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s forwards;
+}
+.timeline-item:nth-child(odd) { left: 0; text-align: right; }
+.timeline-item:nth-child(even) { left: 50%; }
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    width: 16px;
+    height: 16px;
+    background: #00c6ff;
+    border-radius: 50%;
+    z-index: 1;
+}
+.timeline-item:nth-child(odd)::after { right: -8px; }
+.timeline-item:nth-child(even)::after { left: -8px; }
+
+/* Tech Card */
+.tech-card {
+    background: #0b1a2f;
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 3px solid #00c6ff;
+    color: #1eaddd;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+}
+.tech-card h3 { margin-top: 0; font-size: 1.5rem; color: #00fff6; }
+.tech-card .company { font-weight: 500; color: #66ccff; margin-bottom: 10px; }
+.tech-card .date { display: block; font-size: 0.9rem; color: #99ddff; margin-bottom: 10px; }
+.tech-card p { color: #fafbfc; margin: 8px 0 0 0; line-height: 1.5; }
+
+/* Hover Effect */
+.tech-card:hover {
+    transform: translateY(-5px);
+    border-left: 3px solid #00ffea;
+    box-shadow: 0 0 25px #00c6ff;
+}
+
+/* Timeline Animation Delays */
+.timeline-item:nth-child(1) { animation-delay: 0.2s; }
+.timeline-item:nth-child(2) { animation-delay: 0.4s; }
+.timeline-item:nth-child(3) { animation-delay: 0.6s; }
+.timeline-item:nth-child(4) { animation-delay: 0.8s; }
+.timeline-item:nth-child(5) { animation-delay: 1s; }
+
+@keyframes fadeInUp { 0% { opacity: 0; transform: translateY(50px); } 100% { opacity: 1; transform: translateY(0); } }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .timeline-item { width: 100%; padding-left: 20px; padding-right: 20px; text-align: left !important; }
+    .timeline-item::after { left: -8px !important; }
+    .timeline::before { left: 20px; }
+}
+</style>
+
+<!-- Particle JS -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+<script>
+particlesJS("particles-bg", {
+  "particles": {
+    "number": { "value": 50 },
+    "color": { "value": ["#00c6ff","#0072ff","#00ffea"] },
+    "shape": { "type": "circle" },
+    "opacity": { "value": 0.5, "random": true },
+    "size": { "value": 3, "random": true },
+    "line_linked": { "enable": true, "distance": 150, "color": "#00c6ff", "opacity": 0.3, "width": 1 },
+    "move": { "enable": true, "speed": 1, "direction": "none", "random": true, "straight": false, "out_mode": "out" }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": { "onhover": { "enable": true, "mode": "repulse" }, "onclick": { "enable": true, "mode": "push" } },
+    "modes": { "repulse": { "distance": 100 }, "push": { "particles_nb": 4 } }
+  },
+  "retina_detect": true
+});
+</script>
+
+
+    <!-- Gallery Section -->
+    
+
+    
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Connect</h3>
+                    <p>I'm always interested in discussing new opportunities, collaborations, and innovative projects in AI and Data Science.</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/najaf-asghar-jafri-257bb130a" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/jafrinajaf786" class="social-link">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                            <span>InstaGram</span>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fas fa-envelope"></i>
+                            <span>Email:najafjafri167@gmail.com</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contact-form" action="https://formspree.io/f/movkqron" method="POST">
+    <div class="form-group">
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+    </div>
+    <div class="form-group">
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+    </div>
+    <div class="form-group">
+        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+    </div>
+    <button type="submit" class="submit-btn">
+        <span>Send Message</span>
+        <i class="fas fa-paper-plane"></i>
+    </button>
+    <p id="success-message" style="display:none;">Thanks! Your message has been sent.</p>
+</form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Najaf Asghar Jafri. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="animations.js"></script>
+    <script src="theme.js"></script>
+    <!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Najaf Jafri | Portfolio</title>
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #f4f6f9; }
+
+    /* Chat toggle button */
+    #chatToggleBtn {
+      position: fixed; bottom: 30px; right: 30px;
+      background: #667eea; color: #fff; border: none;
+      border-radius: 50%; width: 60px; height: 60px;
+      font-size: 28px; cursor: pointer; z-index: 9999;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      display: flex; align-items: center; justify-content: center;
+      transition: transform 0.3s;
+    }
+    #chatToggleBtn:hover { transform: scale(1.1); }
+
+    /* Chatbot container */
+    .chat-container {
+      position: fixed; bottom: 100px; right: 20px;
+      width: 320px; max-width: 90%; height: 420px;
+      background: #fff; border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+      display: flex; flex-direction: column;
+      overflow: hidden; animation: slideUp 0.6s ease;
+      z-index: 9998;
+      transition: all 0.4s ease;
+    }
+    @keyframes slideUp { from { transform: translateY(100px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
+    .chat-header {
+      background: linear-gradient(135deg,#667eea,#764ba2);
+      color: #fff; text-align: center; padding: 12px; font-weight: bold;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .chat-header button {
+      background: transparent; border: none; color: #fff; font-size: 18px;
+      cursor: pointer;
+    }
+
+    .chat-body {
+      flex: 1; padding: 10px; overflow-y: auto; background: #f9fafc;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .msg {
+      margin: 6px 0; padding: 10px; border-radius: 10px;
+      max-width: 80%; animation: fadeIn 0.4s ease; word-wrap: break-word;
+      transition: background 0.3s, color 0.3s;
+    }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+
+    .user-msg { background: #667eea; color: #fff; align-self: flex-end; }
+    .bot-msg { background: #e5e7eb; color: #111; align-self: flex-start; }
+
+    .chat-input { display: flex; border-top: 1px solid #ddd; transition: background 0.3s; }
+    .chat-input input { flex: 1; padding: 10px; border: none; outline: none; font-size: 14px; background: transparent; color: inherit; }
+    .chat-input button { background: #667eea; border: none; color: #fff; padding: 10px 15px; cursor: pointer; transition: background 0.3s; }
+    .chat-input button:hover { background: #764ba2; }
+
+    /* Dark theme */
+    .dark-theme { background: #1e1e2f; color: #fff; }
+    .dark-theme .bot-msg { background: #2b2b3c; color: #fff; }
+    .dark-theme .user-msg { background: #667eea; color: #fff; }
+    .dark-theme .chat-input { border-top: 1px solid #444; }
+    .dark-theme .chat-body { background: #2b2b3c; }
+
+    /* Mobile responsiveness */
+    @media(max-width: 480px){
+      .chat-container { width: 90%; height: 400px; bottom: 100px; right: 5%; }
+      #chatToggleBtn { bottom: 20px; right: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Chat toggle button -->
+  <button id="chatToggleBtn">💬</button>
+
+  <!-- Chatbot -->
+  <div class="chat-container" id="chatContainer" style="display:none;">
+    <div class="chat-header">
+      <span>💬 Chat with Najaf</span>
+      <div>
+        <button onclick="toggleTheme()">🌙</button>
+        <button onclick="closeChat()">✖</button>
+      </div>
+    </div>
+    <div class="chat-body" id="chatBody">
+      <div class="msg bot-msg">Hi! 👋 I’m Najaf’s AI assistant. Ask me about Najaf, his skills, education, projects, or achievements!</div>
+    </div>
+    <div class="chat-input">
+      <input type="text" id="userInput" placeholder="Type your question...">
+      <button onclick="sendMessage()">➤</button>
+    </div>
+  </div>
+
+  <script>
+    const chatToggleBtn = document.getElementById("chatToggleBtn");
+    const chatContainer = document.getElementById("chatContainer");
+
+    chatToggleBtn.addEventListener("click", () => {
+      chatContainer.style.display = chatContainer.style.display === "none" ? "flex" : "none";
+    });
+
+    function closeChat() { chatContainer.style.display = "none"; }
+
+    let darkMode = false;
+    function toggleTheme() {
+      darkMode = !darkMode;
+      chatContainer.classList.toggle("dark-theme", darkMode);
+    }
+
+    // --- Dataset (resume + LinkedIn Q&A) ---
+const dataset = {
+  "who are you": "I am Najaf Asghar Jafri, a BCA graduate from ERA University with strong interests in AI, Machine Learning, and Data Science.",
+  "introduce yourself": "I am Najaf Asghar Jafri, passionate about AI, Data Science, and building intelligent systems.",
+  "email": "📧 My email is najafjafri167@gmail.com",
+  "gmail": "📧 You can reach me at najafjafri167@gmail.com",
+  "contact": "📞 You can reach me at 8922995110",
+  "phone": "📞 My contact number is 8922995110",
+  "location": "I am from Lucknow, India.",
+  "city": "I live in Lucknow, India",
+  "linkedin": "🔗 linkedin.com/in/najaf-asghar-jafri-257bb130a",
+  "github": "GitHub username: jafrinajaf786",
+  
+  "profile summary": "Quick learner, passionate about technology, skilled in AI, ML, Data Science, and software development with multiple projects and internships.",
+  "about you": "I am Najaf, a tech enthusiast working on AI, ML, and NLP projects with practical experience.",
+
+  "education": "🎓 BCA from ERA University (2022-2025) & DCA from Silver Line Institute (2019-2020).",
+  "college": "I studied BCA at ERA University and DCA at Silver Line Institute.",
+  
+  "projects": "📂 Projects: Biometric Attendance System, DiaGnoFyAI, AI Virtual Eye Mouse, ML Ready AI, Website Chatbot, YouTube Summarizer.",
+  "biometric attendance system": "A real-time attendance system using OpenCV + Streamlit + MySQL.",
+  "diagnoFy ai": "A disease prediction assistant with health suggestions & reports.",
+  "eye mouse": "AI Virtual Eye Mouse using MediaPipe + PyAutoGUI for cursor control.",
+  "ml ready ai": "ML Ready AI cleans datasets and generates ML-ready data with automated EDA.",
+  "website chatbot": "LLM-powered chatbot for Devmitra Solutions’ website using LangChain + Flask.",
+  "youtube summarizer": "Extracts transcripts, summarizes, and translates videos.",
+
+  "skills": "🛠 Python, Java, HTML, CSS, SQL, AI/ML, DL, NLP, Flask, Streamlit, LangChain, OpenCV, GitHub.",
+  "technologies": "I have experience with Python, ML, DL, NLP, Flask, Streamlit, LangChain, and OpenCV.",
+
+  "tools": "⚙️ Tools: Google Colab, Anaconda, Jupyter, VS Code, GitHub.",
+  "libraries": "📚 Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, LangChain, OpenCV, NLTK, PyPDF2.",
+
+  "internships": "💼 Internships at Devmitra Solutions, Slash Mark IT, Criterion Tech, and InternPe.",
+  "devmitra": "At Devmitra, I built LLM-based apps, chatbots, and resume generators.",
+  "slash mark": "At Slash Mark IT, I built ML models like personality classification & car price prediction.",
+  "criterion": "At Criterion Tech, I built a heart disease prediction model.",
+  "internpe": "At InternPe, I worked as a Python Developer Intern.",
+
+  "certificates": "📜 Certifications: Data Science & Analysis (HP), AI with Python (Infosys), Data Analysis with Python (IBM), Python for Data Science (IBM), Build Your Chatbot (IBM).",
+  "achievements": "🏆 1st Prize Tech Expo 2025, 🥈 Quiz Competition 2024, 🥇 Mobilography Gold Medal 2024."
+};
+
+// --- Synonyms map for fuzzy matching ---
+const synonyms = {
+  "who are you": ["who are you", "introduce yourself", "about you", "tell me about yourself", "who"],
+  "email": ["email", "mail id", "gmail", "contact email"],
+  "contact": ["phone", "mobile", "contact", "whatsapp number", "call"],
+  "location": ["where are you from", "city", "place", "location", "hometown"],
+  "linkedin": ["linkedin", "profile link", "linkedin profile"],
+  "github": ["github", "git profile", "github username"],
+
+  "profile summary": ["profile", "summary", "about", "intro", "describe yourself"],
+  "education": ["education", "study", "college", "degree", "qualification", "school", "university"],
+
+  "projects": ["projects", "work", "portfolio", "applications", "what have you built", "experience projects"],
+  "skills": ["skills", "technologies", "abilities", "expertise", "what can you do", "knowledge"],
+  "tools": ["tools", "platforms", "software"],
+  "libraries": ["libraries", "frameworks", "packages", "modules"],
+
+  "internships": ["internships", "training", "experience", "work experience"],
+  "certificates": ["certificates", "courses", "training programs", "qualifications"],
+  "achievements": ["achievements", "awards", "prizes", "honors", "recognition"]
+};
+
+    function findAnswer(input){
+      input = input.toLowerCase().trim();
+      if(dataset[input]) return dataset[input];
+      for(let key in synonyms){
+        for(let phrase of synonyms[key]){
+          if(input.includes(phrase) || phrase.includes(input)) return dataset[key];
+        }
+      }
+      for(let key in dataset){
+        if(input.includes(key) || key.includes(input)) return dataset[key];
+      }
+      return "🤔 Sorry, I don’t have that info yet. Try asking about skills, projects, education, or achievements!";
+    }
+
+    function sendMessage(){
+      let input = document.getElementById("userInput").value.trim();
+      if(input==="") return;
+      let chatBody = document.getElementById("chatBody");
+
+      // User message
+      let userMsg = document.createElement("div");
+      userMsg.className = "msg user-msg";
+      userMsg.textContent = input;
+      chatBody.appendChild(userMsg);
+
+      // Bot response
+      let botMsg = document.createElement("div");
+      botMsg.className = "msg bot-msg";
+      botMsg.textContent = findAnswer(input);
+
+      setTimeout(()=>{
+        chatBody.appendChild(botMsg);
+        chatBody.scrollTop = chatBody.scrollHeight;
+      }, 500);
+
+      document.getElementById("userInput").value = "";
+    }
+
+    document.getElementById("userInput").addEventListener("keypress", function(e){
+      if(e.key==="Enter") sendMessage();
+    });
+  </script>
+  
+</body>
+</html>
+
+</body>
+</html>
